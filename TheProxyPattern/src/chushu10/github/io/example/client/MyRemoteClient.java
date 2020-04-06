@@ -1,6 +1,6 @@
-package chushu10.github.io.client;
+package chushu10.github.io.example.client;
 
-import chushu10.github.io.service.MyRemote;
+import chushu10.github.io.example.client.service.MyRemote;
 
 import java.rmi.Naming;
 

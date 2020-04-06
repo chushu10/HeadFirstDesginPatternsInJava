@@ -1,4 +1,4 @@
-package chushu10.github.io.service;
+package chushu10.github.io.example.client.service;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
