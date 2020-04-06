@@ -1,0 +1,29 @@
+@startuml
+
+interface Subject {
+request()
+}
+
+class RealSubject {
+request()
+}
+
+class Proxy {
+request
+}
+
+Proxy --> RealSubject : subject
+RealSubject ..|> Subject
+Proxy ..|> Subject
+
+note "Both the Proxy and the\nRealSubject implement the\nSubject interface. This\nallow any client to treat\nthe proxy just like the\nRealSubject." as N1
+note "The RealSubject is\nusually the object\nthat does most\nof the real work;\nthe Proxy controls\naccess to it." as N2
+note "The Proxy keeps a\nreference to the\nSubject, so it can\nforward requests\nto the Subject\nwhen necessary." as N3
+note "The Proxy often instantiates\nor handles the creation of\nthe RealSubject" as N4
+
+N1 .. Subject
+N2 .. RealSubject
+N3 .. Proxy
+N4 .. Proxy
+
+@enduml
